@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <title>Calcul</title>
+    <script>
+        function ajouter(prénom, prénoms){
+            prénoms.push(prénom.value);
+        }
+        function afficher(prénoms) {
+            if (prénoms.lenght == 0) {
+                alert("Aucun prénom saisit");
+            }
+            else {
+                alert('Les prénoms sont : ' + prénoms.join(' '));
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="">
+        <p>
+            <label for="prénom">Prénom :</label>
+            <input type="text" name="prénom" id="prénom">
+            <script>
+                var prénoms = [];
+            </script>
+            <input type="reset"  value=" Ajouter " onclick="ajouter(prénom, prénoms)">
+            <br>
+            <br>
+            <input type="button" value=" Afficher tous les prénoms " onclick="afficher(prénoms)">
+            <br>
+        </p>
+    </form>          
+</body>
+</html>

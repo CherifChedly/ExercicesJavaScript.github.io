@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <title>Calcul</title>
+    <script>
+        function calcul(x, y){
+            op = x.value;
+            y.value = eval(op);
+        };
+    </script>
+</head>
+<body>
+    <form method="post" action="">
+        <p>
+            <label for="opération">Opération :</label>
+            <input type="text" name="opération" id="opération">
+            <input type="button"  value=" = " onclick="calcul(opération, résultat)">
+            <input type="text" name="résultat">
+            <br>
+            <a href="#" onclick="calcul(opération, résultat)">Afficher le résultat</a>
+        </p>
+    </form>          
+</body>
+</html>
